@@ -17,7 +17,7 @@ Para clonar o repositório e trabalhar no projeto localmente, siga os passos aba
 
 1. **Clone o repositório:**
    ```bash
-   git clone https://github.com/SeuUsuario/SeuRepositorio.git´´´
+   git clone https://github.com/SeuUsuario/SeuRepositorio.git
    ´´´
 
 2. **Navegue até o diretório do projeto:**
