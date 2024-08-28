@@ -23,7 +23,6 @@ Para clonar o repositório e trabalhar no projeto localmente, siga os passos aba
    ```bash
    cd seuRepositório
 
-
 3. **Abra os arquivos no seu editor de código preferido e inicie o desenvolvimento.**
 
 
