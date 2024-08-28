@@ -1,0 +1,284 @@
+.teste {
+    background-color: #f0f0f0;
+    padding: 83px;
+    height: 100%;
+    width: 100%;
+    text-align: center; /* Centraliza o texto dentro do header */   
+    box-sizing: border-box;
+}
+
+.chat::-webkit-scrollbar {
+  width: 8px; /* largura da barra de rolagem */
+}
+
+/* Estiliza o indicador da barra de rolagem */
+.chat::-webkit-scrollbar-thumb {
+  background-color: #0077cc; /* cor do indicador */
+  border-radius: 5px; /* borda do indicador */
+}
+
+.balao-opcoes {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none; /* Desativa a interação com a div */
+}
+
+.balao-opcoes.interativo {
+  pointer-events: auto; /* Ativa a interação com a div quando visível */
+}
+
+/* Muda a cor do fundo da barra de rolagem */
+.chat::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+.logo {
+    width: 125px; /* Defina uma largura fixa */
+    height: 125px; /* Igual à largura para garantir um quadrado */
+    border-radius: 50%; /* Use 50% para obter um círculo */
+    max-width: 100%; /* Garante que a largura não ultrapasse 150px */
+    margin-bottom: 10px;
+}
+
+#footer{
+  background: #7F7F7F;
+  position: static; /* ou position: absolute; */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#barra-site{
+  background-color: #7BCFFD; 
+  height: 60px;
+  box-sizing: border-box;
+  box-shadow: 0px 5px 8px rgba(63, 58, 58, 0.1);
+}
+
+.chat{
+  background-color: #f0f0f0;
+  padding: 20px; /* Ajuste conforme necessário */
+  box-sizing: border-box;
+  display: flex;
+  height: calc(100vh - 140px);
+  padding-left: 15px;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow-y: auto;
+}
+
+.balao {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px; /* Adiciona um espaçamento entre os balões */
+  align-self: flex-start; /* Alinha o balão à esquerda */
+  font-family: Nunito Sans,sans-serif;
+  flex-direction: column;
+  display: flex;
+}
+
+.balao-opcoes {
+  display: flex;
+  align-items: flex-start; /* Alinha os itens no início do eixo transversal (topo) */
+  flex-direction: column;
+}
+
+.balao-opcoes1 {
+  display: flex;
+  align-items: flex-start; /* Alinha os itens no início do eixo transversal (topo) */
+  flex-direction: column;
+}
+
+.balao-opcoes button {
+  background-color: #0077cc; /* Cor de fundo dos botões */
+  color: white; /* Cor do texto dos botões */
+  padding: 10px 20px; /* Espaçamento interno dos botões */
+  font-size: 16px; /* Tamanho da fonte dos botões */
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px; /* Espaçamento entre os botões */
+  font-family: Nunito Sans,sans-serif;
+}
+
+.balao-opcoes1 button {
+  background-color: #0077cc; /* Cor de fundo dos botões */
+  color: white; /* Cor do texto dos botões */
+  padding: 10px 20px; /* Espaçamento interno dos botões */
+  font-size: 16px; /* Tamanho da fonte dos botões */
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px; /* Espaçamento entre os botões */
+  font-family: Nunito Sans,sans-serif;
+}
+
+.balao-opcoes1 button:hover {
+  background-color: #7BCFFD; /* Adiciona um espaçamento entre os botões */
+}
+
+.balao-opcoes button:hover {
+  background-color: #7BCFFD; /* Adiciona um espaçamento entre os botões */
+}
+
+
+.balao-bem-vindo {
+  opacity: 0; /* Começa com opacidade zero para torná-lo invisível */
+  animation: fade-in 1s ease-out forwards 2s; /* Animação de fade-in */
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0; /* Inicia com opacidade zero */
+  }
+  to {
+    opacity: 1; /* Termina com opacidade total */
+  }
+}
+
+.balao-opcoes .balao .balao-opcoes {
+  display: flex; /* Usando flexbox */
+  flex-direction: column; /* Alinhando os botões em coluna */
+  padding: 10px; /* Adicionando algum espaço interno */
+}
+
+.balao-opcoes button {
+  margin-bottom: 10px; /* Adiciona um espaçamento entre os botões */
+}
+
+#balao-dinamico{
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px; /* Adiciona um espaçamento entre os balões */
+  align-self: flex-start; /* Alinha o balão à esquerda */
+  font-family: Nunito Sans,sans-serif;
+  opacity: 0;
+}
+
+#balao-dinamico-resposta, #balao-dinamico-resposta-nivel4, #balao-dinamico-resposta-nivel5, #balao-dinamico-resposta-nivel6{
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px; /* Adiciona um espaçamento entre os balões */
+  align-self: flex-start; /* Alinha o balão à esquerda */
+  font-family: Nunito Sans,sans-serif;
+  opacity: 0;
+}
+
+.transition-delay {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.delay-show {
+  transition-delay: 1s;
+}
+
+#balao-opcoes-resposta.transition-delay {
+  transition-delay: 0.1s;
+}
+
+#balao-dinamico.transition-delay {
+  transition-delay: 0.2s;
+}
+
+#balao-dinamico-resposta-nv2.transition-delay {
+  transition-delay: 0.3s;
+}
+
+#balao-dinamico-resposta.transition-delay {
+  transition-delay: 0.4s;
+}
+
+#balao-dinamico-resposta-nv3.transition-delay {
+  transition-delay: 0.5s;
+}
+
+#balao-dinamico-resposta-nivel4.transition-delay {
+  transition-delay: 0.6s;
+}
+
+#balao-dinamico-resposta-nv4.transition-delay {
+  transition-delay: 0.7s;
+}
+
+#balao-dinamico-resposta-nivel5.transition-delay {
+  transition-delay: 0.8s;
+}
+
+#balao-dinamico-resposta-nv5.transition-delay {
+  transition-delay: 0.9s;
+}
+
+#balao-dinamico-resposta-nivel6.transition-delay {
+  transition-delay: 1s;
+}
+
+.balao-direito {
+  background-color: #7BCFFD;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px; /* Adiciona um espaçamento entre os balões */
+  align-self: flex-end; /* Alinha o balão à esquerda */
+  font-family: Nunito Sans,sans-serif;
+  color: #fff;
+  word-wrap: break-word;
+}
+
+#balao-opcoes-resposta, #balao-dinamico-resposta-nv2, #balao-dinamico-resposta-nv3, #balao-dinamico-resposta-nv4, #balao-dinamico-resposta-nv5{
+  opacity: 0;
+}
+
+
+
+#circulo {
+  width: 44px; /* O dobro da largura do raio (2 * raio) */
+  height: 44px; /* O dobro da altura do raio (2 * raio) */
+  border-radius: 50%; /* Faz o elemento ser um círculo */
+  background-color: #fff; /* Cor de fundo do círculo */
+  position: relative; /* Posiciona o círculo dentro da barra-site */
+  top: 8px; /* Distância de 3px do topo */
+  left: 20px; /* Distância de 3px da esquerda */
+  display: flex; /* Para centralizar a imagem verticalmente */
+  align-items: center; /* Para centralizar a imagem verticalmente */
+  box-sizing: border-box;
+}
+
+#circulo img {
+  width: 44px; /* Largura da imagem dentro do círculo */
+  height: 44px; /* Altura da imagem dentro do círculo */
+  border-radius: 50%; /* Para garantir que a imagem seja exibida como um círculo */
+  margin: auto; /* Centraliza a imagem horizontalmente */
+  margin-right: 20px;
+}
+
+.texto-circulo {
+  display: flex;
+  flex-direction: column;
+}
+
+.texto-circulo > div {
+  font-size: 20px;
+  font-weight: 500;
+  white-space: nowrap;
+  color: white;
+  font-family: Nunito Sans,sans-serif;
+}
+
+button {
+    background-color: #00a2ff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0077cc;
+}

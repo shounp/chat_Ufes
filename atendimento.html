@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Cabeçalho da página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atendente Virtual - UFES São Mateus</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div>
+    <!-- Div responsável pela barra em cima do chat contendo as informações como título do bot e estado: "online"-->
+    <div id="barra-site">
+        <div id="circulo">
+            <img src="marca_ufes.png" alt="UFES">
+            <div class="texto-circulo">
+                <div>UFES - São Mateus</div>
+                <div style="font-size: 15px;">Online</div>
+            </div>
+        </div>
+    </div>
+    <!-- Div responsável por toda a interação do chat-->
+    <div class="chat">
+        <div class="balao balao-bem-vindo">Olá, seja bem-vindo!</div>
+        <div class="balao" style="opacity: 0; animation: fade-in 2s ease-out forwards 3s;">Em que posso ajudar?</div>
+        <div class="balao-opcoes" style="opacity: 0; animation: fade-in 3s ease-out forwards 4s;">
+            <div class="balao">
+                <button id="assistenciaEstudantil" onclick="mostrarNivel2(this.id)">Assistência Estudantil</button>
+                <button id="informatica" onclick="mostrarNivel2(this.id)">Informática (Equipamentos e Sistemas)</button>
+                <button onclick="mostrarNivel2('Materiais de Expediente')">Materiais de Expediente, Compras, Gestão Patrimonial</button>
+                <button onclick="mostrarNivel2('Saúde')">Saúde (Exames e Atendimentos)</button>
+                <button onclick="mostrarNivel2('Reserva de Vagas')">Reserva de Vagas (SISU)</button>
+                <button onclick="mostrarNivel2('Pagamentos')">Pagamentos, Diárias e Passagens aéreas</button>
+            </div>
+        </div>
+        <div id="balao-opcoes-resposta" class="balao-direito delay-show transition-delay"></div>
+        <div id="balao-dinamico" class="balao-opcoes1 delay-show transition-delay"></div>
+        <div id="balao-dinamico-resposta-nv2" class="balao-direito delay-show transition-delay"></div>
+        <div id="balao-dinamico-resposta" class="balao-opcoes1 delay-show transition-delay"></div>
+        <div id="balao-dinamico-resposta-nv3" class="balao-direito delay-show transition-delay"></div>
+        <div id="balao-dinamico-resposta-nivel4" class="balao-opcoes1 delay-show transition-delay"></div>
+        <div id="balao-dinamico-resposta-nv4" class="balao-direito delay-show transition-delay"></div>
+        <div id="balao-dinamico-resposta-nivel5" class="balao-opcoes1 delay-show transition-delay"></div>
+        <div id="balao-dinamico-resposta-nv5" class="balao-direito delay-show transition-delay"></div>
+        <div id="balao-dinamico-resposta-nivel6" class="balao-opcoes1 delay-show transition-delay"></div>
+    </div>
+    
+
+    <script src="atendente.js"></script>
+
+    <script>
+        // Função para tornar a balao-opcoes interativa após a animação de fade-in da balao-bem-vindo
+        function tornarOpcoesInterativas() {
+            const balaoOpcoes = document.querySelector('.balao-opcoes');
+            balaoOpcoes.classList.add('interativo');
+        }
+
+        // Adiciona um ouvinte de evento ao último balão para chamar a função quando a animação terminar
+        document.querySelector('.chat').addEventListener('animationend', tornarOpcoesInterativas);
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var baloes = document.querySelectorAll("#balao-dinamicos > div");
+
+            baloes.forEach(function(balao, index) {
+                setTimeout(function() {
+                    balao.style.opacity = 1;
+                }, (index + 1) * 1000); // Cada div aparecerá com 1 segundo de intervalo
+            });
+        });
+    </script>
+    <!-- Informações de Footer da página -->
+    <footer id="foot">
+        <div id="footer">
+        © 2013 Universidade Federal do Espírito Santo. Todos os direitos reservados. <br>
+        Rodovia Governador Mário Covas, Km 60 - Bairro Litorâneo, São Mateus - ES | CEP 29932-540
+        </div>
+    </footer>
+
+</body>
+</html>
